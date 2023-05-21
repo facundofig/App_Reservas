@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-------------------------------------------------Login------------------------------------------------------------->
+
+    <div id="contenedorLogin">
+        <fieldset>
+            <h1>Iniciar sesión</h1>
+
+            <label for="txtUsuario_Login">Nombre de usuario: </label>
+            <input type="text" id="txtUsuario_Login">
+
+            <br><br>
+
+            <label for="txtContraseña_Login">Contraseña: </label>
+            <input type="password" id="txtContraseña_Login">
+
+            <br><br>
+
+            <input type="button" value="Ingresar" id="btnIngresar_Login">
+            <input type="button" value="Registrarse" id="btnRegistrarse_Login">
+        </fieldset>
+    </div>
+
+    <!-------------------------------------------------Registrarse------------------------------------------------------->
+
+    <div id="contenedorRegistrarse">
+        <fieldset>
+            <h1>Registro de usuarios</h1>
+
+            <label for="txtNombre_Registro">Nombre completo: </label>
+            <input type="text" id="txtNombre_Registro">
+
+            <br><br>
+
+            <label for="txtUsuario_Registro">Nombre de usuario: </label>
+            <input type="text" id="txtUsuario_Registro">
+
+            <br><br>
+
+            <label for="txtContraseña_Registro">Contraseña: </label>
+            <input type="text" id="txtContraseña_Registro">
+
+            <br><br>
+
+            <input type="button" value="Registrarse" id="btnRegistrarse_Registro">
+        </fieldset>
+    </div>
+
+    <!-----------------------------------Menú de botones dependiendo del usuario----------------------------------------->
+
+    <div id="contenedorMenuLocal">
+        <fieldset>
+            <input type="button" value="Habilitar/deshabilitar reservas" id="btnMenuDesHabReservas_Local">
+            <input type="button" value="Cambiar estado de reserva" id="btnMenuEstadoReserva_Local">
+            <input type="button" value="Modificar cupo máximo" id="btnMenuModificarCupo_Local">
+            <input type="button" value="Visualizar información estadística" id="btnMenuInformacionEstadistica_Local">
+            <input type="button" value="Cerrar cesión" id="btnCerrarCesion_Local" style="float: right;">
+        </fieldset>
+    </div>
+
+    <div id="contenedorMenuPersona">
+        <fieldset>
+            <input type="button" value="Solicitar reserva" id="btnMenuSolicitarReserva_Persona">
+            <input type="button" value="Cancelar reserva" id="btnMenuCancelarReserva_Persona">
+            <input type="button" value="Calificar reserva" id="btnMenuCalificarReserva_Persona">
+            <input type="button" value="Listado reservas pendientes" id="btnMenuReservasPendientes_Persona">
+            <input type="button" value="Visualizar información estadística" id="btnMenuInformacionEstadistica_Persona">
+            <input type="button" value="Cerrar cesión" id="btnCerrarCesion_Persona" style="float: right;">
+        </fieldset>
+    </div>
+
+    <br>
+
+    <!---------------------------------------Funcionalidades usuario local----------------------------------------------->
+
+    <div id="contenedorDisponibilidad_Local">
+        <fieldset>
+            <h1>Habilitar/deshabilitar reservas</h1>
+
+            <label for="slcHabilitado_Disponibilidad_Local">Elija la opción: </label>
+            <select id="slcHabilitado_Disponibilidad_Local">
+                <option value="habilitado">Habilitar</option>
+                <option value="deshabilitado">Deshabilitar</option>
+            </select>
+
+            <br><br>
+
+            <input type="button" value="Modificar" id="btnModificar_Disponibilidad_Local">
+        </fieldset>
+    </div>
+
+    <div id="contenedorEstadoReserva_Local">
+        <fieldset>
+            <h1>Cambiar estado de reserva</h1>
+
+            <label for="txtNombreCliente_EstadoReserva_Local">Nombre del cliente: </label>
+            <input type="text" id="txtNombreCliente_EstadoReserva_Local">
+
+            <br><br>
+
+            <input type="button" value="Buscar" id="btnBuscar_EstadoReserva_Local">
+
+            <br><br>
+
+            <label for="slcReservas_EstadoReserva_Local">Reservas (persona - cantidad de cupos): </label>
+            <select id="slcReservas_EstadoReserva_Local">
+
+            </select>
+
+            <br><br>
+
+            <input type="button" value="Modificar" id="btnModificar_EstadoReserva_Local">
+        </fieldset>
+    </div>
+
+    <div id="contenedorCupoMaximo_Local">
+        <fieldset>
+            <h1>Modificar cupo máximo total</h1>
+
+            <label for="txtNuevoCupo_CupoMaximo_Local">Nuevo cupo máximo: </label>
+            <input type="number" id="txtNuevoCupo_CupoMaximo_Local">
+
+            <br><br>
+
+            <input type="button" value="Modificar" id="btnModificar_CupoMaximo_Local">
+        </fieldset>
+    </div>
+
+    <div id="contenedorInformacionEstadistica_Local">
+        <fieldset>
+            <h1>Informacion estadística</h1>
+
+            <label for="txtOcupacion_InformacionEstadistica_Local">Ocupación del local (%): </label>
+            <input type="text" id="txtOcupacion_InformacionEstadistica_Local" disabled>
+
+            <br><br>
+
+            <label for="txtPromedio_InformacionEstadistica_Local">Promedio de calificaciones: </label>
+            <input type="text" id="txtPromedio_InformacionEstadistica_Local" disabled>
+
+            <br><br>
+
+            <label for="slcCalificacionesLocales_InformacionEstadistica_Local">Calificaciones de otros locales: </label>
+            <select id="slcCalificacionesLocales_InformacionEstadistica_Local">
+
+            </select>
+
+            <br><br>
+
+            <label for="txtCantReservasPendientes_InformacionEstadistica_Local">Cantidad de reservas pendientes:
+            </label>
+            <input type="text" id="txtCantReservasPendientes_InformacionEstadistica_Local" disabled>
+
+            <br><br>
+
+            <label for="txtCantReservasFinalizadas_InformacionEstadistica_Local">Cantidad de reservas finalizadas:
+            </label>
+            <input type="text" id="txtCantReservasFinalizadas_InformacionEstadistica_Local" disabled>
+        </fieldset>
+    </div>
+
+    <!---------------------------------------Funcionalidades usuario persona----------------------------------------------->
+
+    <div id="contenedorSolicitarReserva_Persona">
+        <fieldset>
+            <h1>Reserva de lugares</h1>
+            
+            <label for="txtReservarLugares">Ingrese cantidad de lugares a reservar: </label>
+            <input type="number" id="txtReservarLugares"><br><br>
+            
+            <label for="slcElegirLocalAReservar">Seleccione local a reservar: </label>
+            <select name="" id="slcElegirLocalAReservar"></select><br><br>
+
+            <button id="btnSolicitarReserva_Persona">Solicitar reserva</button>
+
+
+        </fieldset>
+    </div>
+
+    <div id="contenedorCancelarReserva_Persona">
+        <fieldset>
+            <h1>Cancelación de reserva</h1>
+            <label for="slcReservas_CancelarReserva_Persona">Seleccione la reserva a cancelar: </label>
+            <select id="slcReservas_CancelarReserva_Persona">
+
+            </select>
+
+            <br><br>
+
+            <input type="button" value="Cancelar" id="btnCancelarReserva_Persona">
+        </fieldset>
+    </div>
+
+    <div id="contenedorCalificarReserva_Persona">
+        <fieldset>
+            <h1>Calificar reserva</h1>
+            <label for="slcReservasFinalizadas_CalificarReserva_Persona">Seleccione la reserva: </label>
+            <select id="slcReservasFinalizadas_CalificarReserva_Persona">
+
+            </select>
+
+            <br><br>
+
+            <label for="slcPuntuarReserva_CalificarReserva_Persona">Puntuar reserva: </label>
+            <select id="slcPuntuarReserva_CalificarReserva_Persona">
+                <option value=1>1</option>
+                <option value=2>2</option>
+                <option value=3>3</option>
+                <option value=4>4</option>
+                <option value=5>5</option>
+            </select>
+
+            <br><br>
+
+            <input type="button" value="Calificar" id="btnCalificar_CalificarReserva_Persona">
+        </fieldset>
+    </div>
+
+    <div id="contenedorListadoReservas_Persona">
+        <fieldset>
+            <h1>Listado de reservas pendientes</h1>
+            <label for="slcReservaPendiente_ListadoReservas_Persona">Seleccione la reserva: </label>
+            <select id="slcReservaPendiente_ListadoReservas_Persona">
+
+            </select>
+
+            <br><br>
+
+            <input type="button" id="btnMostrar_ListadoReservas_Persona" value="Mostrar">
+
+            <p id="etqFotoLocal_ListadoReservas_Persona"></p>
+
+            <p id="etqNombreCliente_ListadoReservas_Persona"></p>
+
+            <p id="etqCantidadLugares_ListadoReservas_Persona"></p>
+        </fieldset>
+    </div>
+
+    <div id="contenedorInformacionEstadistica_Persona">
+        <fieldset>
+            <h1>Informacion estadística</h1>
+
+            <table border="1" id="tblInformacionEstadistica_Persona">
+                <tr>
+                    <th>Local</th>
+                    <th>Reservas propias</th>
+                    <th>Reservas totales del local</th>
+                    <th>Porcentaje de reservas</th>
+                </tr>
+            </table>
+
+            <p id="etqLocalReservasMaximo"></p>
+        </fieldset>
+    </div>
+
+    <script src="js/codigo.js"></script>
+
+</body>
+
+</html>
